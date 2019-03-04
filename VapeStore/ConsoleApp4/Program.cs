@@ -14,17 +14,14 @@ namespace RoqueVapeStore
             int op;
             int idProd;
 
-            
+            Console.WriteLine("==Roque Vape Store==\n\n");
+            Console.WriteLine("0 - SAIR");
+            Console.WriteLine("1 - VENDER");
+            Console.WriteLine("2 - LISTAR PRODUTOS\n");
+            Console.Write("Escolha a opção desejada: ");
+            op = Convert.ToInt16(Console.ReadLine());
             do
             {
-                Console.Clear();
-                Console.WriteLine("==Roque Vape Store==\n\n");
-                Console.WriteLine("0 - SAIR");
-                Console.WriteLine("1 - VENDER");
-                Console.WriteLine("2 - LISTAR PRODUTOS\n");
-                Console.Write("Escolha a opção desejada: ");
-                op = Convert.ToInt16(Console.ReadLine());
-
                 switch (op)
                 {
                     case 0:
@@ -65,17 +62,17 @@ namespace RoqueVapeStore
 
                         }
 
+
+
+
                         Console.Write("Quantidade de produtos: ");
                         calc.Qtd = Convert.ToInt16(Console.ReadLine());
 
                         decimal total = calc.Total();
-
                         Console.WriteLine("Total: {0}", total);
                         Console.Write("Dinheiro recebido: R$ ");
-
                         calc.Dinheiro = Convert.ToDecimal(Console.ReadLine());
                         Console.WriteLine();
-
                         decimal troco = calc.Troco();
                         Console.Write("Troco: {0}", troco);
 
@@ -84,14 +81,14 @@ namespace RoqueVapeStore
                         break;
 
                     case 2:
-                        Console.Clear();
+
                         Console.WriteLine("=========PRODUTOS========= \n");
                         Console.WriteLine("1 - Vaporesso Pod Zenova Zero        R$200,00");
                         Console.WriteLine("2 - VooPoo Mod Drag      R$350,00");
                         Console.WriteLine("3 - Bateria Samsung 30q      R$50,00");
-                        Console.WriteLine("4 - Carregador NiteCore IW4 New  R$120,00\n");         
-                        Console.WriteLine("Pressione uma tecla para voltar.");
+                        Console.WriteLine("4 - Carregador NiteCore IW4 New  R$120,00\n");
 
+                        Console.WriteLine("Pressione uma tecla para voltar.");
                         Console.ReadKey();
 
                         break;
